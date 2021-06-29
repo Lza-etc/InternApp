@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+{% block logIn %}
+  <a class="nav-item nav-link active right" href="{% url 'blog-register' %}">Register</a>
+{% endblock %}
+{% block content %}
+    {% if msg %}
+        <script>
+            alert('{{msg}}')
+        </script>
+    {% endif %}
+    <form action="{% url 'blog-postsign' %}" method="post">
+        {%  csrf_token %}
+      <div class="form mt-5 pt-5 mx-auto" style="width: 500px;">
+        <div class="form-row ">
+          <div class="form-group w-75">
+            <label for="inputUserName">User Name</label>
+            <input type="username" class="form-control" name="email" id="inputUserName">
+          </div>
+        </div>
+        <div class="form-row ">
+            <div class="form-group w-75">
+            <label for="inputPassword5">Password</label>
+            <input type="password" id="inputPassword5" class="form-control " name="pass" aria-describedby="passwordHelpBlock">
+            </div>
+        </div>
+        <div class="mx-auto " style="width: 200px;" >
+        <button type="submit" class="btn btn-secondary pl-4 pr-4 mt-2"  value="SignIn">SignIn</button>
+      </div>
+      </div>
+      </form>
+{% endblock %}

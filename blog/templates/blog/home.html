@@ -1,0 +1,8 @@
+{% extends 'blog/base.html' %}
+{% block logIn %}
+  <a class="nav-item nav-link active right" href="{% url 'blog-register' %}">Register</a>
+  <a class="nav-item nav-link active right" href="{% url 'blog-signin' %}">Login</a>
+{% endblock %}
+{% block content %}    
+<h1 class="display-4 mx-auto mt-5"style="width: 285px;">Home Page</h1>
+{% endblock %}

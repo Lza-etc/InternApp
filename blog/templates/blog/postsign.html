@@ -1,0 +1,8 @@
+{% extends 'blog/base.html' %}
+{% block logIn %}
+    <a class="nav-item nav-link active right" href="{% url 'blog-logout' %}">LogOut</a>
+{% endblock %}
+{% block content %}  
+    <h1>Signed In Email:</h1>
+    <h5>{{e}}</h5>
+{% endblock %}
