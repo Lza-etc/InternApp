@@ -1,6 +1,6 @@
 /blog/__pycache__
 /study_django/__pycache__
-
+/blog/migrations
 /.env
 /uenv
 
